@@ -41,9 +41,9 @@ def create_pdf():
                 response = requests.get(url, verify=False)
                 response.raise_for_status()
 
-                if counter == 43:
-                    counter += 1
-                    continue
+                # if counter == 43:
+                #     counter += 1
+                #     continue
 
                 if "Error converting document" in response.text or "errors" in response.text:
                     if (retry <= 0):
